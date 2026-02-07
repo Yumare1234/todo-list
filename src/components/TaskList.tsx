@@ -2,9 +2,8 @@ import TaskItem from "./TaskItem";
 import type { ITask } from "./TaskManager";
 
 type Props = {
-  addTask: (title: string) => void;
   tasks: ITask[];
-  toggleTaskCompletion: (id: string) => void;
+  toggleTaskCompletion: (id: number) => void;
 };
 
 const TaskList = ({ tasks, toggleTaskCompletion }: Props) => {
