@@ -1,4 +1,5 @@
 import { useState } from "react";
+import TaskInput from "./TaskInput";
 export interface ITask {
     id: number;
     tx_name: string;
@@ -26,10 +27,11 @@ const TaskManager = () => {
         );
     };
 
-
     return (
         <div className="flex flex-col items-center gap-y-6 p-6 max-w-md mx-auto bg-white rounded-xl shadow-lg min-w-[40%]"> 
             <h1 className="text-3xl font-bold text-indigo-700"> Gestor de Tareas </h1>
+
+            <TaskInput addTask={addTask} />
         </div>
     );
 };
